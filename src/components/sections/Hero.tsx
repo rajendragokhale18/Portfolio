@@ -3,7 +3,7 @@
 import { useEffect, useState, useRef } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowDown, Download, ExternalLink, Mail } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/ui/BrandIcons";
+import { GithubIcon, LinkedinIcon, LeetcodeIcon } from "@/components/ui/BrandIcons";
 import { siteConfig, heroRoles, heroTagline, heroSubtext } from "@/data/content";
 
 export default function Hero() {
@@ -326,6 +326,7 @@ export default function Hero() {
           {[
             { icon: GithubIcon, href: siteConfig.github, label: "GitHub" },
             { icon: LinkedinIcon, href: siteConfig.linkedin, label: "LinkedIn" },
+            { icon: LeetcodeIcon, href: siteConfig.leetcode, label: "LeetCode" },
             { icon: Mail, href: `mailto:${siteConfig.email}`, label: "Email" },
           ].map(({ icon: Icon, href, label }) => (
             <motion.a

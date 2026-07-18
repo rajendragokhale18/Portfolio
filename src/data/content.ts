@@ -6,15 +6,16 @@ export const siteConfig = {
   name: "Rajendra Gokhale",
   title: "Rajendra Gokhale — AI Developer & Backend Engineer",
   description:
-    "Final-year AI & Data Science student and engineer building production AI systems, backend services, and data infrastructure. From prompts to production.",
+    "AI & Data Science engineering graduate building production AI systems, backend services, and data infrastructure. From prompts to production.",
   url: "https://rajendragokhale.dev",
   ogImage: "/og-image.png",
   email: "rajendra.careers01@gmail.com",
   emailSecondary: "rajendragokhale2004@gmail.com",
   phone: "+91-9150273312",
-  location: "Chennai, Tamil Nadu, India",
+  location: "India",
   github: "https://github.com/rajendragokhale18",
   linkedin: "https://linkedin.com/in/rajendragokhale",
+  leetcode: "https://leetcode.com/u/rajendra_gokhale16/",
   resumeUrl: "/resume.pdf",
 };
 
@@ -29,10 +30,11 @@ export const navLinks = [
 ];
 
 export const heroRoles = [
-  "AI Developer",
-  "Backend Engineer",
-  "Systems Architect",
-  "LLM & Agentic AI Builder",
+  "AI Development",
+  "Backend Engineering",
+  "Systems Architecture",
+  "Data Pipelines",
+  "Agentic Automation",
 ];
 
 export const heroTagline = "From prompts to production.";
@@ -40,9 +42,9 @@ export const heroSubtext =
   "Building AI systems, backend services, and data infrastructure that don't just work — they matter.";
 
 export const about = {
-  bio: "I build AI systems that run in production — not just in notebooks. A final-year B.Tech student in AI & Data Science (GPA: 8.41, Anna University, graduating June 2026), I've shipped real backend and AI systems at two companies while still in college — from Python + SQL pipelines processing 1M+ daily records to a Claude LLM-powered automation platform running 500+ daily workflows solo, from scratch. Persistent, curious, and always thinking end-to-end, I'm driven to solve real problems alongside great teams.",
-  location: "Chennai, Tamil Nadu, India",
-  status: "Open to work — AI Engineering, Data Engineering & Backend roles from June 2026 · Chennai + Remote + open to relocation",
+  bio: "What if a self-taught Engineer from Chennai could turn late-night ideas into shipped AI systems? That’s been my quiet journey. I build with passion: LLMs, robust backend architectures, smart data pipelines, and multi-agent solutions that move from concept to production. Whether it’s intelligent automation or impactful healthcare AI, I love creating systems that don’t just work, they matter. Persistent, curious, and always thinking end-to-end, I’m driven to solve real problems and grow alongside great teams.",
+  location: "India",
+  status: "Open to work — AI Engineering, Data Engineering & Backend roles · India + Remote + open to relocation",
   stats: [
     { value: 7, suffix: "", label: "Projects Shipped" },
     { value: 1, suffix: "M+", label: "Daily Data Points Processed" },
@@ -144,7 +146,7 @@ export const education = [
     degree: "B.Tech, Artificial Intelligence & Data Science",
     period: "Nov 2022 – Jun 2026",
     gpa: "8.41 / 10",
-    note: "Final-year student, graduating June 2026",
+    note: "Graduated June 2026",
     coursework: [
       "Machine Learning",
       "Deep Learning",
@@ -225,9 +227,7 @@ export const skillCategories = [
       "Git",
       "GCP",
       "AWS Lambda",
-      "SageMaker",
       "S3",
-      "RDS",
       "IAM",
     ],
   },
@@ -348,24 +348,6 @@ export const certifications = [
     issuer: "Activeloop",
     date: "Jul 2026",
     highlight: true,
-  },
-  {
-    name: "Machine Learning Engineering for Production (MLOps)",
-    issuer: "Coursera",
-    date: "2025",
-    highlight: false,
-  },
-  {
-    name: "Google Cloud Data Engineering Fundamentals",
-    issuer: "Google Cloud",
-    date: "2024",
-    highlight: false,
-  },
-  {
-    name: "Python Data Science Specialization",
-    issuer: "DataCamp",
-    date: "2024",
-    highlight: false,
   },
   {
     name: "SQL for Data Analysis",

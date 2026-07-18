@@ -5,6 +5,7 @@ import SectionWrapper, { childVariants } from "@/components/ui/SectionWrapper";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
 import { about, siteConfig } from "@/data/content";
 import { MapPin, Briefcase } from "lucide-react";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -35,7 +36,7 @@ export default function About() {
         >
           {/* Left: bio */}
           <motion.div variants={childVariants}>
-            {/* Profile placeholder */}
+            {/* Profile Picture */}
             <div
               style={{
                 width: "100%",
@@ -45,49 +46,19 @@ export default function About() {
                 background: "var(--color-bg-surface)",
                 border: "1px solid var(--color-border-glow)",
                 boxShadow: "0 0 40px var(--color-accent-cyan-dim)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
                 marginBottom: 24,
                 overflow: "hidden",
                 position: "relative",
               }}
             >
-              {/* Placeholder silhouette */}
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  background:
-                    "linear-gradient(135deg, var(--color-bg-elevated) 0%, var(--color-bg-surface) 100%)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  flexDirection: "column",
-                  gap: 8,
-                }}
-              >
-                <div
-                  style={{
-                    width: 80,
-                    height: 80,
-                    borderRadius: "50%",
-                    background: "var(--color-accent-cyan-dim)",
-                    border: "2px solid var(--color-accent-cyan)",
-                  }}
-                />
-                <div style={{ width: 120, height: 16, background: "var(--color-border)", borderRadius: 4 }} />
-                <span
-                  style={{
-                    fontFamily: "var(--font-mono)",
-                    fontSize: "0.7rem",
-                    color: "var(--color-text-muted)",
-                    marginTop: 8,
-                  }}
-                >
-                  /public/images/profile.jpg
-                </span>
-              </div>
+              <Image
+                src="/images/profile.jpg"
+                alt="Profile Picture"
+                fill
+                style={{ objectFit: "cover" }}
+                sizes="(max-width: 768px) 100vw, 360px"
+                priority
+              />
             </div>
 
             {/* Location + status */}

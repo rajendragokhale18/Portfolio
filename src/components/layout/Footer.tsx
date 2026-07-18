@@ -2,7 +2,7 @@
 
 import { siteConfig, navLinks } from "@/data/content";
 import { Mail, Heart } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/ui/BrandIcons";
+import { GithubIcon, LinkedinIcon, LeetcodeIcon } from "@/components/ui/BrandIcons";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -85,6 +85,7 @@ export default function Footer() {
           {[
             { icon: GithubIcon, href: siteConfig.github, label: "GitHub" },
             { icon: LinkedinIcon, href: siteConfig.linkedin, label: "LinkedIn" },
+            { icon: LeetcodeIcon, href: siteConfig.leetcode, label: "LeetCode" },
             { icon: Mail, href: `mailto:${siteConfig.email}`, label: "Email" },
           ].map(({ icon: Icon, href, label }) => (
             <a

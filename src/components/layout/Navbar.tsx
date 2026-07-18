@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { siteConfig, navLinks } from "@/data/content";
 import { Mail, Menu, X } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/ui/BrandIcons";
+import { GithubIcon, LinkedinIcon, LeetcodeIcon } from "@/components/ui/BrandIcons";
 
 const sections = navLinks.map((l) => l.href.replace("#", ""));
 
@@ -154,6 +154,7 @@ export default function Navbar() {
                 {[
                   { icon: GithubIcon, href: siteConfig.github, label: "GitHub" },
                   { icon: LinkedinIcon, href: siteConfig.linkedin, label: "LinkedIn" },
+                  { icon: LeetcodeIcon, href: siteConfig.leetcode, label: "LeetCode" },
                   { icon: Mail, href: `mailto:${siteConfig.email}`, label: "Email" },
                 ].map(({ icon: Icon, href, label }) => (
                   <a
@@ -264,6 +265,7 @@ export default function Navbar() {
               {[
                 { icon: GithubIcon, href: siteConfig.github, label: "GitHub" },
                 { icon: LinkedinIcon, href: siteConfig.linkedin, label: "LinkedIn" },
+                { icon: LeetcodeIcon, href: siteConfig.leetcode, label: "LeetCode" },
               ].map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
