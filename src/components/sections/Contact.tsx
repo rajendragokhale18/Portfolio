@@ -18,10 +18,34 @@ export default function Contact() {
     e.preventDefault();
     setFormState("sending");
 
-    // Simulate form submission (replace with actual API call / Formspree)
-    await new Promise((r) => setTimeout(r, 1200));
-    setFormState("sent");
-    setFormData({ name: "", email: "", message: "" });
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "b76b2c5b-2d1d-42fd-8ab5-8859cd676a90",
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setFormState("sent");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        console.error("Form error:", data);
+        setFormState("error");
+      }
+    } catch (error) {
+      console.error("Submission failed:", error);
+      setFormState("error");
+    }
   };
 
   const handleChange = (
@@ -300,10 +324,15 @@ export default function Contact() {
                   ) : (
                     <>
                       <Send size={16} />
-                      Send Message
+                      {formState === "error" ? "Error! Try Again" : "Send Message"}
                     </>
                   )}
                 </button>
+                {formState === "error" && (
+                  <p style={{ color: "#ef4444", fontSize: "0.85rem", textAlign: "center", marginTop: -10 }}>
+                    Something went wrong. Please check your connection and try again.
+                  </p>
+                )}
               </form>
             )}
           </motion.div>
